@@ -32,3 +32,6 @@ def fifa(request):
 
 def call_of_duty(request):
     return render(request, 'call_of_duty.html')
+
+def eventos(request):
+    return render(request, 'eventos.html')
