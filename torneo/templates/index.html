@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competencia de Torneos de Videojuegos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .jumbotron {
+      border-radius: 20px;
+      background-color: #212121;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .section {
+      border-radius: 20px;
+      background-color: #333333;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .btn {
+      background-color: #007bff;
+      border: none;
+      border-radius: 10px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .hidden-content {
+      display: none;
+    }
+    .expand-icon::after {
+      content: '+';
+      margin-left: 5px;
+    }
+    .collapse-icon::after {
+      content: '-';
+      margin-left: 5px;
+    }
+    .big-btn {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header class="jumbotron text-center fade-in">
+    <h1>Competencia de Torneos de Videojuegos</h1>
+    <p>Bienvenido a nuestra plataforma de competencia de torneos de videojuegos. ¡Prepárate para la batalla!</p>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 fade-in">
+        <div class="section">
+          <h2>¿Qué es una competencia de torneos de videojuegos?</h2>
+          <p>Una competencia de torneos de videojuegos es un evento donde jugadores compiten entre sí en diferentes videojuegos con el objetivo de ganar premios, reconocimiento y, en algunos casos, dinero en efectivo. Estos torneos pueden ser individuales o por equipos, y generalmente tienen reglas específicas y estructuras de juego.</p>
+          <p>En nuestra plataforma, ofrecemos una variedad de torneos para que puedas participar y demostrar tus habilidades en tus juegos favoritos.</p>
+        </div>
+      </div>
+      <div class="col-md-6 fade-in">
+        <div class="section">
+          <h2>¿Por qué participar en nuestros torneos?</h2>
+          <p>Participar en nuestros torneos te brinda la oportunidad de:</p>
+          <ul>
+            <li>Competir contra jugadores de todo el mundo.</li>
+            <li>Ganar premios y reconocimiento.</li>
+            <li>Mejorar tus habilidades en tus juegos favoritos.</li>
+            <li>Conectar con una comunidad apasionada de jugadores.</li>
+          </ul>
+          <p>¡No te pierdas la oportunidad de ser parte de nuestra emocionante competencia!</p>
+        </div>
+      </div>
+    </div>
+    <div class="section mt-5 fade-in">
+      <h2 class="clickable expand-icon" onclick="toggleContent('quienesSomos')">¿Quiénes somos?</h2>
+      <div id="quienesSomos" class="hidden-content">
+        <p>Somos una empresa apasionada por los videojuegos, fundada por Ruddy Contreras, un entusiasta de los videojuegos que buscaba impulsar una nueva era de torneos de videojuegos en la zona. Nuestra misión es proporcionar una plataforma donde los jugadores puedan competir de manera justa y divertida, conectarse con otros jugadores y llevar su pasión por los videojuegos al siguiente nivel.</p>
+      </div>
+    </div>
+    <div class="section mt-5 fade-in">
+      <h2 class="clickable expand-icon" onclick="toggleContent('competitividad')">Competitividad</h2>
+      <div id="competitividad" class="hidden-content">
+        <p>En TorneosGamingsRD, valoramos la competitividad y el juego limpio. Nos esforzamos por crear un entorno donde todos los jugadores puedan competir en igualdad de condiciones y disfrutar de una experiencia justa y emocionante. No toleramos el uso de trampas, hacks o cualquier otra forma de comportamiento antideportivo. ¡Juega limpio y diviértete!</p>
+      </div>
+    </div>
+    <div class="section mt-5 fade-in">
+      <h2 class="clickable expand-icon" onclick="toggleContent('patrocinios')">Patrocinios</h2>
+      <div id="patrocinios" class="hidden-content">
+        <p>Estamos abiertos a patrocinios de empresas que deseen promocionarse en nuestros torneos. Si eres una empresa interesada en patrocinar nuestros eventos, contáctanos en <a href="mailto:patrocinios@torneosgamingsrd.com">patrocinios@torneosgamingsrd.com</a> para obtener más información sobre las oportunidades disponibles.</p>
+      </div>
+    </div>
+    <button class="btn btn-primary big-btn fade-in" onclick="window.location.href='/torneo'">Ir a Torneos</button>
+    <footer class="text-center mt-5 fade-in">
+      <p>&copy; 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleContent(sectionId) {
+      const content = document.getElementById(sectionId);
+      content.classList.toggle('hidden-content');
+      const expandIcon = document.querySelector(`.${sectionId}.expand-icon`);
+      const collapseIcon = document.querySelector(`.${sectionId}.collapse-icon`);
+      if (content.classList.contains('hidden-content')) {
+        expandIcon.classList.remove('hidden-content');
+        collapseIcon.classList.add('hidden-content');
+      } else {
+        expandIcon.classList.add('hidden-content');
+        collapseIcon.classList.remove('hidden-content');
+      }
+    }
+  </script>
+
+  <script>
+    // Animación para los elementos que tienen la clase "fade-in" cuando se desplazan a su posición en la pantalla
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      const fadeIns = document.querySelectorAll('.fade-in');
+      fadeIns.forEach(element => {
+        window.addEventListener('scroll', () => {
+          if (isInViewport(element)) {
+            element.style.opacity = 1;
+          }
+        });
+      });
+
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    });
+  </script>
+</body>
+</html>
