@@ -26,16 +26,17 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-w&v-qk2&z^b%%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-LOGIN_REDIRECT_URL = "/" 
-LOGOUT_REDIRECT_URL = "/" 
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "/accounts/login/eventos" 
+LOGOUT_REDIRECT_URL = "/accounts/login" 
+#LOGIN_REDIRECT_URL = "home"
+#LOGOUT_REDIRECT_URL = "home"
 
 ALLOWED_HOSTS = []
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
 # Application definition
 

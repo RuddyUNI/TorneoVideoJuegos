@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -23,6 +24,7 @@ class LoginFormView(FormView):
 
     def form_invalid(self, form):
         return render(self.request, self.template_name, {'form': form, 'error_message': "Invalid username or password."})
+        
 
 def super_smash_bros(request):
     return render(request, 'super_smash_bros.html')
