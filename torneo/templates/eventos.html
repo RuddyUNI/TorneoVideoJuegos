@@ -6,16 +6,26 @@
     <title>Eventos</title>
 </head>
 <body>
-    <h1>Eventos</h1>
-    <ul>
-        {% for evento in eventos %}
-            <li>
-                <h2>{{ evento.titulo }}</h2>
-                <p><strong>Fecha:</strong> {{ evento.fecha }}</p>
-                <p><strong>Juego:</strong> {{ evento.juego }}</p>
-                <p><strong>Descripción:</strong> {{ evento.descripcion }}</p>
-            </li>
-        {% endfor %}
-    </ul>
+    <h1>Próximos Eventos</h1>
+    {% if eventos %}
+        <ul>
+            {% for evento in eventos %}
+                <li>
+                    <h2>{{ evento.titulo }}</h2>
+                    <p><strong>Fecha:</strong> {{ evento.fecha }}</p>
+                    <p><strong>Juego:</strong> {{ evento.juego }}</p>
+                    <p><strong>Descripción:</strong> {{ evento.descripcion }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay eventos disponibles.</p>
+    {% endif %}
+    <!-- Agrega este bloque de código para depuración -->
+    {% if eventos %}
+        <pre>
+            {{ eventos }}
+        </pre>
+    {% endif %}
 </body>
 </html>
