@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.contrib import messages
 from .models import Evento
+from .forms import EventoForm
 
 # Create your views here.
 def index(request):
@@ -39,7 +40,8 @@ def call_of_duty(request):
 def eventos(request):
     return render(request, 'eventos.html')
 
+def agregar_eventos(request):
+    return render(request, 'agregar_evento.html')
 
-def lista_eventos(request):
-    eventos = Evento.objects.all()
-    return render(request, 'eventos.html', {'eventos': eventos})
+
+

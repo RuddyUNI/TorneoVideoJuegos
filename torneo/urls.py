@@ -8,6 +8,6 @@ urlpatterns = [
     path('super_smash_bros', views.super_smash_bros),
     path('fifa', views.fifa),
     path('call_of_duty', views.call_of_duty),
-    path('accounts/login/eventos', views.eventos),  # Coma agregada aquí
-    path('eventos/', views.lista_eventos, name='lista_eventos'),
+    path('accounts/login/eventos', views.eventos),  
+    path('agregar_evento/', views.agregar_eventos, name='agregar_evento')
 ]
