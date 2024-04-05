@@ -1,1 +1,108 @@
-<p2>Estamos trabajando en esta pantalla. Pronto estara disponible<p2><p2>Estamos trabajando en esta pantalla. Pronto estara disponible<p2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torneos de Videojuegos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .jumbotron {
+      border-radius: 20px;
+      background-color: #212121;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .evento {
+      border-radius: 20px;
+      background-color: #333333;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    .evento h2 {
+      color: #ffffff;
+    }
+    .evento p {
+      color: #cccccc;
+    }
+    .btn-mas-info {
+      display: block;
+      width: auto; 
+      margin: 10px auto;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-mas-info:hover {
+      background-color: #0056b3;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header class="jumbotron text-center fade-in">
+    <h1>Torneos de Videojuegos</h1>
+    <p>¡Explora nuestros próximos eventos!</p>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="evento fade-in">
+          <h2>Evento 1</h2>
+          <p>Fecha: 20 de Abril, 2024</p>
+          <p>Juego: Call of Duty: Modern Warfare</p>
+          <p>Descripción: Únete al emocionante torneo de Call of Duty y demuestra tus habilidades en el campo de batalla.</p>
+          <a href="#" class="btn btn-mas-info fade-in-btn">Más información</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="evento fade-in">
+          <h2>Evento 2</h2>
+          <p>Fecha: 25 de Abril, 2024</p>
+          <p>Juego: League of Legends</p>
+          <p>Descripción: Participa en el torneo de League of Legends y compite con jugadores de todo el mundo.</p>
+          <a href="#" class="btn btn-mas-info fade-in-btn">Más información</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="evento fade-in">
+          <h2>Evento 3</h2>
+          <p>Fecha: 30 de Abril, 2024</p>
+          <p>Juego: FIFA 24</p>
+          <p>Descripción: ¡El torneo de FIFA más grande está aquí! Prepárate para enfrentarte a los mejores jugadores del mundo.</p>
+          <a href="#" class="btn btn-mas-info fade-in-btn">Más información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center">
+    <p>© 2024 Torneos de Videojuegos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      const eventos = document.querySelectorAll('.evento');
+      const btnMasInfo = document.querySelectorAll('.btn-mas-info');
+
+      eventos.forEach(evento => {
+        evento.classList.add('fade-in');
+      });
+
+      btnMasInfo.forEach(btn => {
+        btn.classList.add('fade-in-btn');
+      });
+    });
+  </script>
+</body>
+</html>
