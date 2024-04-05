@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.contrib import messages
-from .models import Evento
-from .forms import EventoForm
+from django.core.mail import send_mail
+from django.conf import settings
+from django.http import HttpResponse
+
 
 # Create your views here.
 def index(request):
@@ -43,5 +45,6 @@ def eventos(request):
 def agregar_eventos(request):
     return render(request, 'agregar_evento.html')
 
-
-
+    
+def confirmacion_registro(request):
+    return render(request, 'confirmacion_registro.html')

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'torneo',
     "accounts",
+    'django.core.mail', 
 ]
 
 MIDDLEWARE = [
