@@ -1,109 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Torneos de Videojuegos</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
-    .jumbotron {
-      border-radius: 20px;
-      background-color: #212121;
-      color: #ffffff;
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    .evento {
-      border-radius: 20px;
-      background-color: #333333;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    }
-    .evento h2 {
-      color: #ffffff;
-    }
-    .evento p {
-      color: #cccccc;
-    }
-    .btn-mas-info {
-      display: block;
-      width: auto; 
-      margin: 10px auto;
-      font-size: 18px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      background-color: #007bff;
-      color: #ffffff;
-      border: none;
-    }
-    .btn-mas-info:hover {
-      background-color: #0056b3;
-      color: #ffffff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos de Videojuegos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .jumbotron {
+            border-radius: 20px;
+            background-color: #212121;
+            color: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .evento {
+            border-radius: 20px;
+            background-color: #333333;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+        .evento h2 {
+            color: #ffffff;
+        }
+        .evento p {
+            color: #cccccc;
+        }
+        .btn-mas-info {
+            display: block;
+            width: auto;
+            margin: 10px auto;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+        }
+        .btn-mas-info:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+        .imagen-evento {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-  <header class="jumbotron text-center fade-in">
-    <h1>Torneos de Videojuegos</h1>
-    <p>¡Explora nuestros próximos eventos!</p>
-  </header>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="evento fade-in">
-          <h2>Evento 1</h2>
-          <p>Fecha: 20 de Abril, 2024</p>
-          <p>Juego: Call of Duty: Modern Warfare</p>
-          <p>Descripción: Únete al emocionante torneo de Call of Duty y demuestra tus habilidades en el campo de batalla.</p>
-          <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
-
+    <header class="jumbotron text-center fade-in">
+        <h1>Torneos de Videojuegos</h1>
+        <p>¡Explora nuestros próximos eventos!</p>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="evento fade-in">
+                    <h2>Evento 1</h2>
+                    <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/kronos/common/social-share/social-share-image.jpg" alt="Evento 1" class="imagen-evento">
+                    <p>Fecha: 20 de Abril, 2024</p>
+                    <p>Juego: Call of Duty: Modern Warfare</p>
+                    <p>Descripción: Únete al emocionante torneo de Call of Duty y demuestra tus habilidades en el campo de batalla.</p>
+                    <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="evento fade-in">
+                    <h2>Evento 2</h2>
+                    <img src="https://img.redbull.com/images/c_fill,w_1200,h_600,g_auto,f_auto,q_auto/redbullcom/2022/8/1/ksfga6rlx2ugfhjd9vnk/league-of-legends.jpg" alt="Evento 2" class="imagen-evento">
+                    <p>Fecha: 25 de Abril, 2024</p>
+                    <p>Juego: League of Legends</p>
+                    <p>Descripción: Participa en el torneo de League of Legends y compite con jugadores de todo el mundo.</p>
+                    <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="evento fade-in">
+                    <h2>Evento 3</h2>
+                    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2023/07/ea-sports-fc-24-todo-sabemos-sucesor-fifa-24-3084248.jpg" alt="Evento 3" class="imagen-evento">
+                    <p>Fecha: 30 de Abril, 2024</p>
+                    <p>Juego: FIFA 24</p>
+                    <p>Descripción: ¡El torneo de FIFA más grande está aquí! Prepárate para enfrentarte a los mejores jugadores del mundo.</p>
+                    <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="evento fade-in">
+                    <h2>Evento 4</h2>
+                    <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Fortnite_image1600w.jpg" alt="Evento 4" class="imagen-evento">
+                    <p>Fecha: 5 de Mayo, 2024</p>
+                    <p>Juego: Fortnite</p>
+                    <p>Descripción: Únete al torneo de Fortnite y demuestra tu habilidad en la construcción y el combate.</p>
+                    <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="evento fade-in">
+                    <h2>Evento 5</h2>
+                    <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Overwatch2_Season6.png" alt="Evento 5" class="imagen-evento">
+                    <p>Fecha: 10 de Mayo, 2024</p>
+                    <p>Juego: Overwatch</p>
+                    <p>Descripción: Participa en el torneo de Overwatch y lucha en intensos combates 6v6.</p>
+                    <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="evento fade-in">
+                    <h2>Evento 6</h2>
+                    <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_bannerXS.jpg" alt="Evento 6" class="imagen-evento">
+                    <p>Fecha: 15 de Mayo, 2024</p>
+                    <p>Juego: Super Smash Bros. Ultimate</p>
+                    <p>Descripción: ¡El torneo de Super Smash Bros. Ultimate está aquí! Lucha contra tus amigos y demuestra quién es el mejor luchador.</p>
+                    <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
+                </div>
+            </div>
+            <!-- Agrega más eventos aquí -->
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="evento fade-in">
-          <h2>Evento 2</h2>
-          <p>Fecha: 25 de Abril, 2024</p>
-          <p>Juego: League of Legends</p>
-          <p>Descripción: Participa en el torneo de League of Legends y compite con jugadores de todo el mundo.</p>
-          <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="evento fade-in">
-          <h2>Evento 3</h2>
-          <p>Fecha: 30 de Abril, 2024</p>
-          <p>Juego: FIFA 24</p>
-          <p>Descripción: ¡El torneo de FIFA más grande está aquí! Prepárate para enfrentarte a los mejores jugadores del mundo.</p>
-          <a href="{% url 'agregar_evento' %}" class="btn btn-mas-info fade-in-btn">Más información</a>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <footer class="text-center">
-    <p>© 2024 Torneos de Videojuegos. Todos los derechos reservados.</p>
-  </footer>
+    <footer class="text-center">
+        <p>© 2024 Torneos de Videojuegos. Todos los derechos reservados.</p>
+    </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function(event) { 
-      const eventos = document.querySelectorAll('.evento');
-      const btnMasInfo = document.querySelectorAll('.btn-mas-info');
-
-      eventos.forEach(evento => {
-        evento.classList.add('fade-in');
-      });
-
-      btnMasInfo.forEach(btn => {
-        btn.classList.add('fade-in-btn');
-      });
-    });
-  </script>
-</body>
-</html>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            const eventos = document.querySelectorAll('.evento');
+            const btnMasInfo = document
