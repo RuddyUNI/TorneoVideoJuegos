@@ -9,5 +9,5 @@ urlpatterns = [
     path('fifa', views.fifa),
     path('call_of_duty', views.call_of_duty),
     path('accounts/login/eventos', views.eventos),  
-    path('agregar_evento/', views.agregar_eventos, name='agregar_evento')
+    path('agregar_evento', views.agregar_eventos, name='agregar_evento')
 ]
