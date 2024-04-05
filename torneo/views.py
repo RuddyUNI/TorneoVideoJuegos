@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.contrib import messages
+from .models import Evento
 
 # Create your views here.
 def index(request):
@@ -37,3 +38,8 @@ def call_of_duty(request):
 
 def eventos(request):
     return render(request, 'eventos.html')
+
+
+def lista_eventos(request):
+    eventos = Evento.objects.all()
+    return render(request, 'eventos.html', {'eventos': eventos})
