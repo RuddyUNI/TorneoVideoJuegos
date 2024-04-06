@@ -48,3 +48,4 @@ def agregar_eventos(request):
     
 def confirmacion_registro(request):
     return render(request, 'confirmacion_registro.html')
+

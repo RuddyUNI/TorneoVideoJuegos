@@ -11,6 +11,30 @@
             color: #ffffff;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+            min-height: 100vh;
+        }
+        .nombre-usuario {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .nombre-usuario .dropdown-menu {
+            background-color: #333333;
+            border: none;
+            border-radius: 5px;
+        }
+        .dropdown-menu a {
+            color: #ffffff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-menu a:hover {
+            background-color: #555555;
         }
         .jumbotron {
             border-radius: 20px;
@@ -56,10 +80,22 @@
     </style>
 </head>
 <body>
+    <div class="nombre-usuario dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Usuario Estandar
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <!--<a class="dropdown-item" href="/configuracion">Configuración</a> -->
+            <a class="dropdown-item" href="/">Logout</a>
+        </div>
+    </div>
     <header class="jumbotron text-center fade-in">
         <h1>Torneos de Videojuegos</h1>
         <p>¡Explora nuestros próximos eventos!</p>
     </header>
+    <div class="container">
+        <div class="row">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -130,8 +166,15 @@
         <p>© 2024 Torneos de Videojuegos. Todos los derechos reservados.</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
-            const eventos = document.querySelectorAll('.evento');
-            const btnMasInfo = document
-})
+        $(document).ready(function(){
+            $(".nombre-usuario").click(function(){
+                $(".dropdown-menu").toggle();
+            });
+        });
+    </script>
+</body>
+</html>
