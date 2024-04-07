@@ -40,6 +40,14 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
 # Application definition
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True 
+DEFAULT_FROM_EMAIL = "torneosgamingsrd@gmail.com" 
+EMAIL_HOST_USER =  "torneosgamingsrd@gmail.com"
+EMAIL_HOST_PASSWORD = "bkaq rrzl ooqb mbnt"
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

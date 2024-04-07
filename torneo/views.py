@@ -40,12 +40,34 @@ def call_of_duty(request):
     return render(request, 'call_of_duty.html')
 
 def eventos(request):
-    return render(request, 'eventos.html')
+    return render(request, 'eventos.html',{"Usuario":request.user})
 
 def agregar_eventos(request):
     return render(request, 'agregar_evento.html')
 
-    
+
 def confirmacion_registro(request):
+    send_mail(
+            subject = "¡Bienvenido al Torneo! Confirmación de Registro Exitoso",
+            message = """
+            
+    Es un placer darte la más cordial bienvenida al Torneo organizado por TorneosGamingsRD. Nos complace enormemente confirmar que tu registro ha sido recibido y procesado exitosamente.
+
+    ¡Felicidades! Has dado el primer paso hacia una experiencia de juego emocionante y llena de diversión. Nos complace enormemente contar contigo como parte de nuestra comunidad de jugadores apasionados.
+        
+    ¡Que empiece la competición y que la suerte esté siempre de tu lado!
+
+    Atentamente,
+
+    Ruddy Contreras
+    TorneosGamingsRD
+    Creador de TorneosGamingsRD    
+
+            """,
+            recipient_list = [request.POST.get('email')],
+            from_email = None,
+            #from_email is only required to be filled if you do not want to use the value in our settings
+            fail_silently=False,
+        )
     return render(request, 'confirmacion_registro.html')
 
