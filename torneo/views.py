@@ -49,21 +49,17 @@ def agregar_eventos(request):
 def confirmacion_registro(request):
     send_mail(
             subject = "¡Bienvenido al Torneo! Confirmación de Registro Exitoso",
-            message = """
-            
-    Es un placer darte la más cordial bienvenida al Torneo organizado por TorneosGamingsRD. Nos complace enormemente confirmar que tu registro ha sido recibido y procesado exitosamente.
+            message = "Es un placer darte la más cordial bienvenida al Torneo organizado por TorneosGamingsRD. Nos complace enormemente confirmar que tu registro ha sido recibido y procesado exitosamente."
+            ""
+        "\n\n¡Felicidades! Has dado el primer paso hacia una experiencia de juego emocionante y llena de diversión. Nos complace enormemente contar contigo como parte de nuestra comunidad de jugadores apasionados."
 
-    ¡Felicidades! Has dado el primer paso hacia una experiencia de juego emocionante y llena de diversión. Nos complace enormemente contar contigo como parte de nuestra comunidad de jugadores apasionados.
-        
-    ¡Que empiece la competición y que la suerte esté siempre de tu lado!
+        "\n\n¡Que empiece la competición y que la suerte esté siempre de tu lado!"
 
-    Atentamente,
+        "\n\nAtentamente,"
 
-    Ruddy Contreras
-    TorneosGamingsRD
-    Creador de TorneosGamingsRD    
-
-            """,
+        "\n\nRuddy Contreras"
+        "\nTorneosGamingsRD"
+        "\nCreador de TorneosGamingsRD",
             recipient_list = [request.POST.get('email')],
             from_email = None,
             #from_email is only required to be filled if you do not want to use the value in our settings
